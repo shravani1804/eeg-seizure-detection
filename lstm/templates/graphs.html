@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3 class="text-center">Model Evaluation Graphs</h3>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Training Accuracy</div>
+                <div class="card-body text-center">
+                    <img src="/static/plots/accuracy.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <!-- Training Loss -->
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header">Training Loss</div>
+            <div class="card-body text-center">
+                <img src="/static/plots/loss.png" class="img-fluid ">
+            </div>
+        </div>
+    </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Confusion Matrix</div>
+                <div class="card-body text-center">
+                    <img src="/static/plots/confusion_matrix.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">F1 Score Precision Recall</div>
+                <div class="card-body text-center">
+                    <img src="/static/plots/overall_metrics.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">F1 Score Precision Recall</div>
+                <div class="card-body text-center">
+                    <img src="/static/plots/classification_report.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

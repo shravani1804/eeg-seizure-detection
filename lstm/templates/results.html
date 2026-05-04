@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Prediction Results{% endblock %}
+
+{% block content %}
+
+<div class="container py-4">
+    <!-- Prediction Results -->
+    <div class="card p-4 mb-4 shadow-lg rounded">
+        <h2 class="mb-4 text-center">Prediction Results</h2>
+        <h4>Predicted Class:</h4>
+        <p class="fs-5">{{ predicted_class }}</p>
+
+        <h4>Confidence:</h4>
+        <p class="fs-5">{{ confidence }}</p>
+    </div>
+
+    <!-- Intermediate Results -->
+    <div class="card p-4 shadow-lg rounded">
+        <h2 class="mb-4 text-center">Intermediate Results</h2>
+
+        <h5>Raw Input </h5>
+        <div class="table-responsive mb-4">
+            {{ raw_preview | safe }}
+        </div>
+
+        <h5>Scaled Input </h5>
+        <div class="table-responsive mb-4">
+            {{ scaled_preview | safe }}
+        </div>
+
+        <h5>Reshaped Input</h5>
+        <div class="table-responsive mb-4">
+            {{ reshaped_preview | safe }}
+        </div>
+
+        
+    </div>
+</div>
+
+{% endblock %}

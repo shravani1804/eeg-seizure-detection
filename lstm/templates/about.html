@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title %}About Project{% endblock %}
+
+{% block extra_css %}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+ .sub{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 30px auto;
+    padding: 30px;
+    background:linear-gradient(#8B89F5,white);
+ }
+    .container {
+      max-width: 100%;
+      margin: 30px auto;
+      background: linear-gradient(to bottom right, #dbeafe, #e0e7ff);
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 45px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .project-img {
+      width: 400px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 300px;
+      height: 400px;
+      background: linear-gradient(to bottom,blue, deeppink);
+      border-radius: 15px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      padding: 15px 40px;
+      line-height: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+  </style>
+  
+  {% endblock %}
+
+{% block content %}
+<body>
+  <div class="container">
+    <h1>Epileptic Seizure Detection in EEG Signals</h1>
+    <div class="sub">
+     <p style="color:black;font-size: 20px;text-align: justify;width: 500px;line-height: 30px;">Epilepsy is a neurological disorder that causes sudden and repeated seizures. Doctors use EEG (Electroencephalogram) signals to study brain activity and detect seizures.
+      This project focuses on Multiclass Epileptic Seizure Detection, which means the system can identify different seizure states Interictal (between seizures), Preictal (before seizure), 
+      and Ictal (during seizure). By using machine learning techniques, the system aims to make seizure detection faster, more accurate, and helpful for medical diagnosis.</p>
+     <img src="/static/plots/signal.jpg" alt="EEG Image" class="project-img">
+    </div>
+    <div class="cards">
+      <div class="card">
+       <p style="color: white;font-size: 30px;">Interictal (Between Seizures)</p>
+        <p style="color: white;font-size: 20px;text-align: justify;">The interictal state is the period between seizures when the brain is in a relatively normal condition. 
+        During this time, no seizure activity is present, and the EEG signals usually appear stable with typical brain wave patterns.</p>
+      </div>
+      <div class="card">
+        <p style="color: white;font-size: 30px;">Preictal (Before Seizure)</p>
+        <p style="color: white;font-size: 20px;text-align: justify;">The preictal state occurs just before a seizure begins. In this stage, the brain starts showing early abnormal activity, and subtle changes can be observed in EEG signals.
+             Detecting this state is very important for predicting seizures in advance.</p>
+      </div>
+      <div class="card">
+        <p style="color: white;font-size: 30px;">Ictal (During Seizure)</p>
+        <p style="color: white;font-size: 20px;text-align: justify;">The ictal state refers to the period when the seizure is actually happening. EEG signals during this phase show strong abnormal spikes and rhythmic patterns,
+             and the patient experiences visible seizure symptoms.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+{% endblock %}
